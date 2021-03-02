@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="800.0" style="-fx-background-color: #00ccff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutX="28.0" layoutY="74.0" prefHeight="224.0" prefWidth="70.0" spacing="15.0">
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Title">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Author">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Years">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Pages">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="117.0" layoutY="74.0" prefHeight="224.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <TextField fx:id="tfid" />
+            <TextField fx:id="tftitle" />
+            <TextField fx:id="tfauthor" />
+            <TextField fx:id="tfyear" layoutX="10.0" layoutY="36.0" />
+            <TextField fx:id="tfpages" layoutX="10.0" layoutY="87.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvbooks" layoutX="341.0" layoutY="74.0" onMouseClicked="#handleMouseAction" onSort="#handleButtonAction" prefHeight="307.0" prefWidth="434.0" style="-fx-background-color: #ffff99;">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="60.79998779296875" text="ID" />
+          <TableColumn fx:id="coltitle" prefWidth="104.0" text="Title" />
+            <TableColumn fx:id="colauthor" prefWidth="136.0" text="Author" />
+            <TableColumn fx:id="colyear" prefWidth="65.60009765625" text="Years" />
+            <TableColumn fx:id="colpages" prefWidth="68.7999267578125" text="Pages" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnInsert" layoutX="28.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="90.0" text="Insert" />
+      <Button fx:id="btnUpdate" layoutX="127.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="90.0" text="Update">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@approve-and-update.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnDelete" layoutX="227.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="90.0" text="Delete">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@delete-row.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="39.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@insert-row-above.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="283.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Book details">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5533333248562283" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Text layoutX="709.0" layoutY="475.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered by MLR">
+         <font>
+            <Font name="Megrim" size="9.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
